@@ -1,7 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
+import ticketReducer from '../redux/slices/ticketSlices';
 
-const store = configureStore({
-  reducer: {},
+export const store = configureStore({
+  reducer: ticketReducer,
 });
 
 export type RootState = ReturnType<typeof store.getState>;

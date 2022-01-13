@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /mnt/c/Users/Takashi/AppData/Roaming/npm/node_modules/yarn/bin/yarn.js add redux @reduxjs/toolkit
+  /usr/bin/node /mnt/c/Users/Takashi/AppData/Roaming/npm/node_modules/yarn/bin/yarn.js add react-redux
 
 PATH: 
   /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/Takashi/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Takashi/AppData/Roaming/npm:/mnt/c/Users/Takashi/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
@@ -26,9 +26,11 @@ npm manifest:
       "preview": "vite preview"
     },
     "dependencies": {
+      "@reduxjs/toolkit": "^1.7.1",
       "axios": "^0.24.0",
       "react": "^17.0.2",
       "react-dom": "^17.0.2",
+      "redux": "^4.1.2",
       "sass": "^1.48.0"
     },
     "devDependencies": {
@@ -249,6 +251,13 @@ Lockfile:
       "@babel/plugin-syntax-jsx" "^7.16.7"
       "@babel/types" "^7.16.7"
   
+  "@babel/runtime@^7.9.2":
+    version "7.16.7"
+    resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.16.7.tgz#03ff99f64106588c9c403c6ecb8c3bafbbdff1fa"
+    integrity sha512-9E9FJowqAsytyOY6LG+1KuueckRL+aQW+mKvXRXnuFGyRAyepJPmEo9vgMfXUA6O9u3IeEdv9MAkppFcaQwogQ==
+    dependencies:
+      regenerator-runtime "^0.13.4"
+  
   "@babel/template@^7.16.7":
     version "7.16.7"
     resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.16.7.tgz#8d126c8701fde4d66b264b3eba3d96f07666d155"
@@ -281,6 +290,16 @@ Lockfile:
     dependencies:
       "@babel/helper-validator-identifier" "^7.16.7"
       to-fast-properties "^2.0.0"
+  
+  "@reduxjs/toolkit@^1.7.1":
+    version "1.7.1"
+    resolved "https://registry.yarnpkg.com/@reduxjs/toolkit/-/toolkit-1.7.1.tgz#994962aeb7df3c77be343dd2ad1aa48221dbaa0c"
+    integrity sha512-wXwXYjBVz/ItxB7SMzEAMmEE/FBiY1ze18N+VVVX7NtVbRUrdOGKhpQMHivIJfkbJvSdLUU923a/yAagJQzY0Q==
+    dependencies:
+      immer "^9.0.7"
+      redux "^4.1.2"
+      redux-thunk "^2.4.1"
+      reselect "^4.1.5"
   
   "@rollup/pluginutils@^4.1.2":
     version "4.1.2"
@@ -614,6 +633,11 @@ Lockfile:
     dependencies:
       function-bind "^1.1.1"
   
+  immer@^9.0.7:
+    version "9.0.12"
+    resolved "https://registry.yarnpkg.com/immer/-/immer-9.0.12.tgz#2d33ddf3ee1d247deab9d707ca472c8c942a0f20"
+    integrity sha512-lk7UNmSbAukB5B6dh9fnh5D0bJTOFKxVg2cyJWTYrWRfhLrLMBquONcUs3aFq507hNoIZEDDh8lb8UtOizSMhA==
+  
   immutable@^4.0.0:
     version "4.0.0"
     resolved "https://registry.yarnpkg.com/immutable/-/immutable-4.0.0.tgz#b86f78de6adef3608395efb269a91462797e2c23"
@@ -756,6 +780,28 @@ Lockfile:
     integrity sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==
     dependencies:
       picomatch "^2.2.1"
+  
+  redux-thunk@^2.4.1:
+    version "2.4.1"
+    resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-2.4.1.tgz#0dd8042cf47868f4b29699941de03c9301a75714"
+    integrity sha512-OOYGNY5Jy2TWvTL1KgAlVy6dcx3siPJ1wTq741EPyUKfn6W6nChdICjZwCd0p8AZBs5kWpZlbkXW2nE/zjUa+Q==
+  
+  redux@^4.1.2:
+    version "4.1.2"
+    resolved "https://registry.yarnpkg.com/redux/-/redux-4.1.2.tgz#140f35426d99bb4729af760afcf79eaaac407104"
+    integrity sha512-SH8PglcebESbd/shgf6mii6EIoRM0zrQyjcuQ+ojmfxjTtE0z9Y8pa62iA/OJ58qjP6j27uyW4kUF4jl/jd6sw==
+    dependencies:
+      "@babel/runtime" "^7.9.2"
+  
+  regenerator-runtime@^0.13.4:
+    version "0.13.9"
+    resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
+    integrity sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==
+  
+  reselect@^4.1.5:
+    version "4.1.5"
+    resolved "https://registry.yarnpkg.com/reselect/-/reselect-4.1.5.tgz#852c361247198da6756d07d9296c2b51eddb79f6"
+    integrity sha512-uVdlz8J7OO+ASpBYoz1Zypgx0KasCY20H+N8JD13oUMtPvSHQuscrHop4KbXrbsBcdB9Ds7lVK7eRkBIfO43vQ==
   
   resolve@^1.20.0:
     version "1.21.0"
