@@ -1,0 +1,45 @@
+.sort {
+  flex: 3;
+  &__buttons {
+    display: flex;
+    align-items: center;
+  }
+  &__button {
+    $parent: &;
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem;
+    border: 0.5px solid #dfe5ec;
+    background-color: #fff;
+    height: 50px;
+    width: 170px;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    &.active {
+      background-color: #2196f3;
+
+      color: #fff;
+    }
+    &:hover {
+      cursor: pointer;
+      label {
+        cursor: pointer;
+      }
+    }
+    &:nth-child(1) {
+      border-top-left-radius: 0.3rem;
+      border-bottom-left-radius: 0.3rem;
+    }
+    &:last-child {
+      border-top-right-radius: 0.3rem;
+      border-bottom-right-radius: 0.3rem;
+    }
+    input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+  }
+}

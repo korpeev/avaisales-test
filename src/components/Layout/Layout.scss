@@ -1,0 +1,24 @@
+.container {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.layout {
+  margin-top: 3rem;
+  &__logo {
+    margin: 3rem 0;
+    text-align: center;
+  }
+}
+
+.content {
+  display: flex;
+}
+
+.title {
+  color: #4a4a4a;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+}
